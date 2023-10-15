@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form com Mask</title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+        <form id="formTask">
+            <div class="container">
+                <label for="name" class="margin">Nome completo:</label>
+                <input type="text" placeholder="Seu nome" name="name" id="name">
+
+                <label for="email" class="margin">E-Mail:</label>
+                <input type="email" placeholder="exemplo@gmail.com" name="email" id="email">
+
+                <label for="phoneNumber" class="margin">Telefone:</label>
+                <input type="tel" placeholder="(00) 00000-0000" name="phoneNumber" id="phoneNumber">
+
+                <label for="cpfNumber" class="margin">CPF:</label>
+                <input type="text" placeholder="000.000.000-0" name="cpfNumber" id="cpfNumber">
+
+                <label for="cep" class="margin">CEP:</label>
+                <input type="text" placeholder="00000-000" name="cep" id="cep">
+
+                <label for="address" class="margin">Endereço completo:</label>
+                <textarea placeholder="Seu endereço" name="address" id="address"></textarea>
+
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="./JSFiles/jquery.mask.min.js"></script>
+        <script src="./JSFiles/jquery.validate.min.js"></script>
+        <script src="./JSFiles/messages_pt_BR.min.js"></script>
+        <script src="./JSFiles/main.js"></script>
+    </body>
+</html>
