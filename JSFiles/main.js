@@ -3,10 +3,6 @@ $(document).ready(function () {
         e.preventDefault(); //Previne que a página não seja recarregada após o submit.
     })
 
-    $('#phoneNumber').keypress(function (e) {
-        if (isNaN(String.fromCharCode(e.which))) e.preventDefault();
-    });
-    
     $('#phoneNumber').mask('(00) 00000-0000');
 
     $('#cpfNumber').mask('000.000.000-0');
