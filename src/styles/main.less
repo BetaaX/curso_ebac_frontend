@@ -2,7 +2,7 @@
 @import "./config/reset";
 
 @breakpointMobile: ~"(max-width: 767px)";
-@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+@breakpointTablet: ~"(max-width: 1023px)";
 
 .width100 {
     width: 100%;
@@ -10,7 +10,7 @@
 
 body {
     background-color: #colors[@backgroundColor];
-
+    
     li {
         list-style: none;
     }
@@ -26,21 +26,21 @@ body {
         position: sticky;
         top: 0;
         left: 0;
-
+        
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 16px 0;
         }
-
+        
         .menu {
             display: flex;
-
+            
             li {
                 font-weight: bold;
                 margin-left: 24px;
-
+                
                 a {
                     color: #colors[@secondColor];
                     text-decoration: none;
@@ -48,10 +48,10 @@ body {
             }
         }
     }
-
+    
     section {
         padding: 56px 0;
-
+        
         .products {
             margin-top: 40px;
             display: grid;
@@ -59,13 +59,13 @@ body {
             column-gap: 1%;
             row-gap: 4%;
             .width100;
-
+            
             .product {
                 &-item img {
                     .width100;
                     border-radius: 16px;
                 }
-
+                
                 &-button {
                     display: block;
                     background-color: #colors[@buttonColor];
@@ -84,21 +84,21 @@ body {
         }
     }
     
-    @media screen and (max-width: 767px) {
+    @media @breakpointMobile {
         .products {
             display: block;
         }
-    
+        
         .product-item  {
             margin-bottom: 32px;
         }
     }
     
-    @media screen and (max-width: 1023px) {
+    @media @breakpointTablet {
         .container {
             max-width: 80%;
         }
-    
+        
         .products {
             grid-template-columns: repeat(2, 48.5%);
             column-gap: 3%;
