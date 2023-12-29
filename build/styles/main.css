@@ -73,7 +73,7 @@ body section .products .product-button:hover {
   body .products {
     display: block;
   }
-  body .product-item {
+  body .products .product-item {
     margin-bottom: 32px;
   }
 }
@@ -81,7 +81,7 @@ body section .products .product-button:hover {
   body .container {
     max-width: 80%;
   }
-  body .products {
+  body .container .products {
     grid-template-columns: repeat(2, 48.5%);
     column-gap: 3%;
   }

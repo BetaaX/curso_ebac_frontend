@@ -1,5 +1,5 @@
-@import "./maps/map";
-@import "./config/reset";
+@import "./maps/map.less";
+@import "./config/reset.less";
 
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1023px)";
@@ -87,21 +87,21 @@ body {
     @media @breakpointMobile {
         .products {
             display: block;
-        }
-        
-        .product-item  {
-            margin-bottom: 32px;
+            
+            .product-item  {
+                margin-bottom: 32px;
+            }
         }
     }
     
     @media @breakpointTablet {
         .container {
             max-width: 80%;
-        }
-        
-        .products {
-            grid-template-columns: repeat(2, 48.5%);
-            column-gap: 3%;
+            
+            .products {
+                grid-template-columns: repeat(2, 48.5%);
+                column-gap: 3%;
+            }
         }
     }
 }
