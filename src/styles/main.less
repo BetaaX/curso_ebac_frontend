@@ -3,6 +3,7 @@
 
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(max-width: 1023px)";
+@breakpointDesktop: ~"(min-width: 1024px)";
 
 .width100 {
     width: 100%;
@@ -52,6 +53,30 @@ body {
     section {
         padding: 56px 0;
         
+        .product {
+            &-item img {
+                .width100;
+                border-radius: 16px;
+            }
+            
+            &-button {
+                display: block;
+                background-color: #colors[@buttonColor];
+                color: #colors[@secondColor];
+                text-align: center;
+                padding: 8px 0;
+                border-radius: 8px;
+                margin-top: 8px;
+                text-decoration: none;
+                
+                &:hover {
+                    background-color: #colors[@buttonHoverColor];
+                }
+            }
+        }
+    }
+    
+    @media @breakpointDesktop {
         .products {
             margin-top: 40px;
             display: grid;
@@ -59,38 +84,6 @@ body {
             column-gap: 1%;
             row-gap: 4%;
             .width100;
-            
-            .product {
-                &-item img {
-                    .width100;
-                    border-radius: 16px;
-                }
-                
-                &-button {
-                    display: block;
-                    background-color: #colors[@buttonColor];
-                    color: #colors[@secondColor];
-                    text-align: center;
-                    padding: 8px 0;
-                    border-radius: 8px;
-                    margin-top: 8px;
-                    text-decoration: none;
-                    
-                    &:hover {
-                        background-color: #colors[@buttonHoverColor];
-                    }
-                }
-            }
-        }
-    }
-    
-    @media @breakpointMobile {
-        .products {
-            display: block;
-            
-            .product-item  {
-                margin-bottom: 32px;
-            }
         }
     }
     
@@ -101,6 +94,16 @@ body {
             .products {
                 grid-template-columns: repeat(2, 48.5%);
                 column-gap: 3%;
+            }
+        }
+    }
+    
+    @media @breakpointMobile {
+        .products {
+            display: block;
+            
+            .product-item  {
+                margin-bottom: 32px;
             }
         }
     }
